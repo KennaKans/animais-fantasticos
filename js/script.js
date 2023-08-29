@@ -4,11 +4,11 @@ import TabNav from './modules/tabnav.js';
 import Modal from './modules/modal.js';
 import ScrollAnima from './modules/scroll-anima.js';
 import Tooltip from './modules/tooltip.js';
-import DropdownMenu from './modules/dropdown-menu.js';
 import initMenuMobile from './modules/menu-mobile.js';
 import initFuncionamento from './modules/schedule.js';
 import fetchAnimais from './modules/fetch-animais.js';
 import fetchBtc from './modules/fetch-btc.js';
+import DropdownMenu from './modules/dropdown-menu.js';
 
 const scrollSuave = new ScrollSuave('[data-menu="suave"] a[href^="#"]');
 scrollSuave.init();
@@ -35,7 +35,7 @@ tooltip.init();
 const scrollAnima = new ScrollAnima('[data-anime="scroll"]');
 scrollAnima.init();
 
-const dropdownMenu = new DropdrownMenu('[data-dropdown]');
+const dropdownMenu = new DropdownMenu('[data-dropdown]');
 dropdownMenu.init();
 
 initMenuMobile();
