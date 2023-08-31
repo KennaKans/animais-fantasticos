@@ -4,11 +4,11 @@ import TabNav from './modules/tabnav.js';
 import Modal from './modules/modal.js';
 import ScrollAnima from './modules/scroll-anima.js';
 import Tooltip from './modules/tooltip.js';
-import initMenuMobile from './modules/menu-mobile.js';
-import initFuncionamento from './modules/schedule.js';
+import MenuMobile from './modules/menu-mobile.js';
 import fetchAnimais from './modules/fetch-animais.js';
 import fetchBtc from './modules/fetch-btc.js';
 import DropdownMenu from './modules/dropdown-menu.js';
+import initFuncionamento from './modules/schedule.js';
 
 const scrollSuave = new ScrollSuave('[data-menu="suave"] a[href^="#"]');
 scrollSuave.init();
@@ -38,7 +38,9 @@ scrollAnima.init();
 const dropdownMenu = new DropdownMenu('[data-dropdown]');
 dropdownMenu.init();
 
-initMenuMobile();
+const menuMobile = new MenuMobile('[data-menu="button"]', '[data-menu="list"]');
+menuMobile.init();
+
 initFuncionamento();
 
 fetchAnimais('../../animaisapi.json', '.numeros-grid');
