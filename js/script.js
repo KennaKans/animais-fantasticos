@@ -8,7 +8,7 @@ import MenuMobile from './modules/menu-mobile.js';
 import fetchAnimais from './modules/fetch-animais.js';
 import fetchBtc from './modules/fetch-btc.js';
 import DropdownMenu from './modules/dropdown-menu.js';
-import initFuncionamento from './modules/schedule.js';
+import Horario from './modules/schedule.js';
 
 const scrollSuave = new ScrollSuave('[data-menu="suave"] a[href^="#"]');
 scrollSuave.init();
@@ -41,7 +41,8 @@ dropdownMenu.init();
 const menuMobile = new MenuMobile('[data-menu="button"]', '[data-menu="list"]');
 menuMobile.init();
 
-initFuncionamento();
+const funcionamento = new Horario('[data-semana]', 'aberto');
+funcionamento.init();
 
 fetchAnimais('../../animaisapi.json', '.numeros-grid');
 
