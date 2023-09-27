@@ -45,7 +45,7 @@ menuMobile.init();
 const funcionamento = new Horario('[data-semana]', 'aberto');
 funcionamento.init();
 
-fetchAnimais('../animais-fantasticos/animaisapi.json', '.numeros-grid');
+fetchAnimais('https://kennakans.github.io/animais-fantasticos/animaisapi.json', '.numeros-grid');
 
 fetchBtc('https://blockchain.info/ticker', '.btc-preco');
 
